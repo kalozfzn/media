@@ -67,7 +67,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
       App.init();
-      display();
+      fungsidisplay();
       
       
       
