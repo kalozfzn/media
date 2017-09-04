@@ -108,6 +108,9 @@
       return false;
 
     });
+    function percobaan(){
+
+    }
     function fungsidisplay(){
         var flag = 0;
         
