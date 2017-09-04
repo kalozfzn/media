@@ -154,6 +154,9 @@
                     case 'admin':
                         $this::getBackend('admin/_index','@dashboard','index');
                         break;
+                    case 'chat':
+                        $this::getBackend('user/_index','@chat','index');
+                        break;
 
     			}
 

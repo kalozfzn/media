@@ -10,7 +10,7 @@ $limit = $_GET['limit'];
 $offset = $_GET['offset'];
 $off = $_GET['off'];
 
-if (isset($limit) || $limit) {
+if (isset($limit)) {
 	
 $cobasql = $perintah->getDB()->query("SELECT * FROM post_comment ORDER BY postcommentid DESC LIMIT {$limit} OFFSET {$offset}");
 	while ($coba = $cobasql->fetch_object()) { ?>
