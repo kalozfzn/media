@@ -1,3 +1,9 @@
+<?php 
+  if ($_SESSION['id'] == "") {
+      
+        $perintah->getRedirect("");
+  }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,6 +73,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
       App.init();
+      display();
       fungsidisplay();
       
       
@@ -101,6 +108,7 @@
         success:function(data){
           document.getElementById('message').value = "";
           display();
+          fungsidisplay();
 
         }
 
@@ -130,6 +138,7 @@
 
     $(window).scroll(function(){
         if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+          $(".loadmore").delay(500).show(200);
             
             $.ajax({
                 type: 'GET',
@@ -139,6 +148,7 @@
                     'limit' : 3
                 },
                 success: function(data){
+                  $(".loadmore").fadeOut(300);
                     
                     $('#result').append(data);
                     flag +=3;
